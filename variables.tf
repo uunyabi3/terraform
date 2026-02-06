@@ -1,11 +1,22 @@
 variable "aws_region" {
-    description = "The AWS region to deploy resources in"
-    type        = string
-    default = "ap-northeast-1"
+  default = "ap-northeast-2"
 }
 
-variable "vpc_name" {
-    description = "The name of the VPC"
-    type        = string
-    default     = "hajimari-terraform"
+variable "project_name" {
+  description = "Project Name"
+  default     = "ipblock-macro"
+}
+
+variable "environment" {
+  description = "Environment"
+  default     = "prod"
+}
+
+variable "instance_type" {
+  default = "t3.micro"
+}
+
+variable "bucket_name" {
+  description = "Log Storage for IP Block Macro"
+  default     = "ipblock-macro-prod-logs-2026"
 }
